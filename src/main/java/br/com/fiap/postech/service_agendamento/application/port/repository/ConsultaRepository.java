@@ -22,8 +22,7 @@ public class ConsultaRepository {
         return consulta;
     }
 
-    // To Do: Listar todas as consultas que o paciente tem
-    public Consulta getConsultaByDocumentoPaciente(String documentoPaciente) {
+    public List<Consulta> getConsultasByDocumentoPaciente(String documentoPaciente) {
         Map<String, AttributeValue> expressionAttributeValues = new HashMap<>();
         expressionAttributeValues.put(":documentoPaciente", new AttributeValue().withS(documentoPaciente));
 
@@ -33,16 +32,10 @@ public class ConsultaRepository {
                 .withExpressionAttributeValues(expressionAttributeValues)
                 .withConsistentRead(false);
 
-        List<Consulta> consultas = dynamoDBMapper.query(Consulta.class, queryExpression);
-
-        if (!consultas.isEmpty())
-            return consultas.get(0);
-        else
-            return null;
+        return dynamoDBMapper.query(Consulta.class, queryExpression);
     }
 
-    // To Do: Listar todas as consultas que o medico tem
-    public Consulta getConsultaByDocumentoMedico(String documentoMedico) {
+    public List<Consulta> getConsultaByDocumentoMedico(String documentoMedico) {
         Map<String, AttributeValue> expressionAttributeValues = new HashMap<>();
         expressionAttributeValues.put(":documentoMedico", new AttributeValue().withS(documentoMedico));
 
@@ -54,10 +47,7 @@ public class ConsultaRepository {
 
         List<Consulta> consultas = dynamoDBMapper.query(Consulta.class, queryExpression);
 
-        if (!consultas.isEmpty())
-            return consultas.get(0);
-        else
-            return null;
+        return dynamoDBMapper.query(Consulta.class, queryExpression);
     }
 
 }

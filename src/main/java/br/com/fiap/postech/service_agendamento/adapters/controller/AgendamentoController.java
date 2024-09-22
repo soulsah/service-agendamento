@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/agendamento")
 public class AgendamentoController {
@@ -36,14 +38,13 @@ public class AgendamentoController {
     }
 
     @PostMapping("/consulta")
-    public ResponseEntity<Consulta> postAgendarConsulta(@RequestBody Consulta consulta)
+    public ResponseEntity<String> postAgendarConsulta(@RequestBody Consulta consulta)
     {
-        var response = _consultaService.gravarConsulta(consulta);
-        return ResponseEntity.ok().body(response);
+        return _consultaService.gravarConsulta(consulta);
     }
 
     @GetMapping("/consulta/medico")
-    public ResponseEntity<Consulta> getConsultaPorDocumentoMedico(@RequestParam String documentoMedico)
+    public ResponseEntity<List<Consulta>> getConsultaPorDocumentoMedico(@RequestParam String documentoMedico)
     {
         var response = _consultaService.getConsultaPorDocumentoMedico(documentoMedico);
 
@@ -54,7 +55,7 @@ public class AgendamentoController {
     }
 
     @GetMapping("/consulta/paciente")
-    public ResponseEntity<Consulta> getConsultaPorDocumentoPaciente(@RequestParam String documentoPaciente)
+    public ResponseEntity<List<Consulta>> getConsultaPorDocumentoPaciente(@RequestParam String documentoPaciente)
     {
         var response = _consultaService.getConsultaPorDocumentoPaciente(documentoPaciente);
 

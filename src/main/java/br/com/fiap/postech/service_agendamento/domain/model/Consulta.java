@@ -21,7 +21,13 @@ public class Consulta {
     private String idConsulta;
 
     @DynamoDBAttribute
+    private String nomePaciente;
+
+    @DynamoDBAttribute
     private String documentoPaciente;
+
+    @DynamoDBAttribute
+    private String nomeMedico;
 
     @DynamoDBAttribute
     private String documentoMedico;
