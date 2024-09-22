@@ -1,0 +1,61 @@
+{
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "idConsulta",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "documentoMedico",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "documentoPaciente",
+      "AttributeType": "S"
+    }
+  ],
+  "KeySchema": [
+    {
+      "AttributeName": "idConsulta",
+      "KeyType": "HASH"
+    }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 1,
+    "WriteCapacityUnits": 1
+  },
+  "TableName": "consultas",
+  "GlobalSecondaryIndexes": [
+    {
+      "IndexName": "documentoMedicoIndex",
+      "KeySchema": [
+        {
+          "AttributeName": "documentoMedico",
+          "KeyType": "HASH"
+        }
+      ],
+      "Projection": {
+        "ProjectionType": "ALL"
+      },
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+      }
+    },
+    {
+      "IndexName": "documentoPacienteIndex",
+      "KeySchema": [
+        {
+          "AttributeName": "documentoPaciente",
+          "KeyType": "HASH"
+        }
+      ],
+      "Projection": {
+        "ProjectionType": "ALL"
+      },
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+      }
+    }
+  ]
+}
