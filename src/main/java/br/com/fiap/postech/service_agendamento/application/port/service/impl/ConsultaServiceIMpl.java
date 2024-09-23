@@ -35,8 +35,6 @@ public class ConsultaServiceIMpl implements ConsultaService {
         var consultasFiltradas = this.filtrarConsultas(consultasMedico);
         var temConflitoAgenda = this.verificarConflitoAgenda(consultasFiltradas, consulta.getData(), consulta.getHorarioInicio());
 
-
-
         if (temConflitoJanela)
             return ResponseEntity.badRequest().body("Janela de atendimento do medico nao disponivel para esse horario.");
 
