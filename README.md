@@ -34,8 +34,6 @@ Bibliotecas:
 - OpenAPI
 - Lombok
 
-  
-
 Banco de dados:
 
 - AWS DynamoDB
@@ -57,6 +55,11 @@ Para rodar a aplicação no AWS ECS, foi criado o arquivo Dockerflie que gerenci
 
 ![image](https://github.com/user-attachments/assets/38ee4d73-5cc6-47cd-88ce-3c923611ba22)
 
+## Cobertura de Testes Unitários da aplicação service-usuario
+
+Comprovando acima de 80% de cobertura de testes unitário:
+
+![image](https://github.com/user-attachments/assets/789e93a5-2dbd-47f3-b4f0-01497914ffc9)
 
 ## Documentação das API's
 
@@ -65,8 +68,6 @@ Adicionamos a geração automática da documentação através da biblioteca Spr
 Microservice Usuario:  http://localhost:8080/swagger-ui/index.html
 
 ![image](https://github.com/user-attachments/assets/8df7d9ec-762b-4ea9-9189-37e0f5dd86f4)
-
-
 
 ## Arquivo Postman
 
