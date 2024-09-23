@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "c98614dd-b43e-4426-933a-b5567a487096",
+		"name": "Hackaton",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15045855"
+	},
+	"item": [
+		{
+			"name": "Janela Horario Atendimento",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/agendamento/horarios?documentoMedico=45612378901",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agendamento",
+						"horarios"
+					],
+					"query": [
+						{
+							"key": "documentoMedico",
+							"value": "45612378901"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/agendamento/horarios?documento=45612378901' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "Janela Horario Atendimento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"documentoMedico\": \"45612378901\",\n    \"horarioInicio\": \"09:00\",\n    \"horarioFinal\": \"18:00\",\n    \"email\": \"guilherme_oelias@hotmail.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/agendamento/horarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agendamento",
+						"horarios"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/agendamento/horarios/{documento}?documento=45612378900' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"documento\": \"45612378900\",\n  \"horarioInicio\": \"09:00\",\n  \"horarioFinal\": \"18:00\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Agendar Consulta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nomePaciente\": \"Queridao\",\n    \"documentoPaciente\": \"45612378902\",\n    \"nomeMedico\": \"Marcao\",\n    \"documentoMedico\": \"45612378901\",\n    \"data\": \"20/09/2025\",\n    \"horarioInicio\": \"16:30\",\n    \"horarioFinal\": \"17:30\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/agendamento/consulta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agendamento",
+						"consulta"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\n  'http://localhost:8080/agendamento/consulta' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"documentoPaciente\": \"45612378902\",\n  \"documentoMedico\": \"45612378901\",\n  \"data\": \"21/09/2024\",\n  \"horarioInicio\": \"13:00\",\n  \"horarioFinal\": \"14:00\"\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Consultas Medico",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/agendamento/consulta/medico?documentoMedico=45612378901",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agendamento",
+						"consulta",
+						"medico"
+					],
+					"query": [
+						{
+							"key": "documentoMedico",
+							"value": "45612378901"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/agendamento/consulta/medico?documento=45612378902' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		},
+		{
+			"name": "Consultas Paciente",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/agendamento/consulta/paciente?documentoPaciente=45612378902",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agendamento",
+						"consulta",
+						"paciente"
+					],
+					"query": [
+						{
+							"key": "documentoPaciente",
+							"value": "45612378902"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\n  'http://localhost:8080/agendamento/consulta/medico?documento=45612378902' \\\n  -H 'accept: */*'"
+			},
+			"response": []
+		}
+	]
+}
