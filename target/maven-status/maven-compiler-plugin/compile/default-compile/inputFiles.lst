@@ -1,0 +1,10 @@
+/home/batman/Projetos/service-agendamento/src/main/java/br/com/fiap/postech/service_agendamento/ServiceAgendamentoApplication.java
+/home/batman/Projetos/service-agendamento/src/main/java/br/com/fiap/postech/service_agendamento/adapters/controller/AgendamentoController.java
+/home/batman/Projetos/service-agendamento/src/main/java/br/com/fiap/postech/service_agendamento/adapters/mapper/AgendarConsultaMapper.java
+/home/batman/Projetos/service-agendamento/src/main/java/br/com/fiap/postech/service_agendamento/adapters/mapper/CadastrarHorarioMapper.java
+/home/batman/Projetos/service-agendamento/src/main/java/br/com/fiap/postech/service_agendamento/adapters/persistence/DynamoDbAgendamentoRepository.java
+/home/batman/Projetos/service-agendamento/src/main/java/br/com/fiap/postech/service_agendamento/application/dto/AgendamentoResponse.java
+/home/batman/Projetos/service-agendamento/src/main/java/br/com/fiap/postech/service_agendamento/application/port/repository/AgendamentoRepository.java
+/home/batman/Projetos/service-agendamento/src/main/java/br/com/fiap/postech/service_agendamento/application/port/service/AgendamentoService.java
+/home/batman/Projetos/service-agendamento/src/main/java/br/com/fiap/postech/service_agendamento/application/port/service/impl/AgendamentoServiceImpl.java
+/home/batman/Projetos/service-agendamento/src/main/java/br/com/fiap/postech/service_agendamento/domain/model/HorariosAtendimentos.java
