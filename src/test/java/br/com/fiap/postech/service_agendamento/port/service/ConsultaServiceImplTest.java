@@ -74,7 +74,9 @@ class ConsultaServiceImplTest {
         Consulta consulta = new Consulta();
         consulta.setDocumentoMedico("123456");
         consulta.setHorarioInicio("10:00");
-        consulta.setData("25/09/2024");
+        consulta.setData("26/09/2024");
+        consulta.setNomeMedico("Dr. Teste");
+        consulta.setNomePaciente("Paciente Teste");
 
         HorariosAtendimentos horariosAtendimentos = new HorariosAtendimentos();
         horariosAtendimentos.setHorarioInicio("09:00");
@@ -84,7 +86,7 @@ class ConsultaServiceImplTest {
                 .thenReturn(horariosAtendimentos);
 
         Consulta consultaExistente = new Consulta();
-        consultaExistente.setData("25/09/2024");
+        consultaExistente.setData("26/09/2024");
         consultaExistente.setHorarioInicio("10:30");
 
         when(consultaRepository.getConsultaByDocumentoMedico(consulta.getDocumentoMedico()))
@@ -99,6 +101,7 @@ class ConsultaServiceImplTest {
         verify(consultaRepository, times(0)).save(consulta);
         verify(sqsService, times(0)).enviarMensagem(anyString(), anyString());
     }
+
 
     @Test
     void testGravarConsulta_ComJanelaInvalida() {
