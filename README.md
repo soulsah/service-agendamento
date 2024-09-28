@@ -71,7 +71,7 @@ Microservice Usuario:  http://localhost:8080/swagger-ui/index.html
 
 ## Arquitetura
 
-![image](https://github.com/user-attachments/assets/ab99b154-a2aa-4604-a401-4e06b5c03bf1)
+![image](https://github.com/user-attachments/assets/ec553b00-8724-44b6-bdba-d61988583fa6)
 
 ## Arquivo Postman
 
