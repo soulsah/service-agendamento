@@ -69,6 +69,10 @@ Microservice Usuario:  http://localhost:8080/swagger-ui/index.html
 
 ![image](https://github.com/user-attachments/assets/8df7d9ec-762b-4ea9-9189-37e0f5dd86f4)
 
+## Arquitetura
+
+![image](https://github.com/user-attachments/assets/ec553b00-8724-44b6-bdba-d61988583fa6)
+
 ## Arquivo Postman
 
 Disponibilizamos um de arquivo JSON com todas as requisições Postman para testar a API, os arquivos estão disponíveis nos seguintes links:
